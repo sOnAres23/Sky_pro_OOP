@@ -6,7 +6,7 @@ from src.category import Category
 
 
 def read_from_json(file_path: str) -> List[Dict[str, Any]]:
-    with open(file_path, encoding="utf-8") as f:
+    with open(file_path, 'r', encoding="utf-8") as f:
         info_data = json.load(f)
     return info_data
 
