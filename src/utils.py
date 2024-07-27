@@ -22,6 +22,6 @@ def create_objects(info_file):
     return categories
 
 
-if __name__ == "__main__":
-    data = read_from_json("../data/products.json")
-    print(create_objects(data)[0].name)
+# if __name__ == "__main__":
+#     data = read_from_json("../data/products.json")
+#     print(create_objects(data)[0].name)
