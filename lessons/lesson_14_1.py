@@ -12,10 +12,10 @@ class Employee:
     def __init__(self, name, surname, pay):
         """Метод для инициализации экземпляра класса"""
         """Задаем значения атрибутам экземпляра"""
-        self.name = name
-        self.surname = surname
+        self.__name = name
+        self.__surname = surname
         self.pay = pay
-        self.email = f'{name}_{surname}@gmail.com'
+        self._email = f'{name}_{surname}@gmail.com'
         self.is_working = False
         self.is_on_vacation = False
 
@@ -23,7 +23,7 @@ class Employee:
 
     def fullname(self):  # Метод
         """Метод, который возвращает полное имя сотрудника."""
-        return f'{self.name} {self.surname}'  # self использует данные конкретного экземпляра
+        return f'{self.__name} {self.__surname}'  # self использует данные конкретного экземпляра
 
     def apply_raise(self):  # И это метод
         pay_up = self.pay * self.raise_amount
@@ -50,11 +50,11 @@ print(emp_1.fullname())
 
 print(emp_1.pay)
 print(emp_1.apply_raise())
-print(emp_1.email)
+print(emp_1._email)
 
 # Вызываем метод fullname экземпляра
 print(emp_2.fullname())
 
 print(emp_2.pay)
 print(emp_2.apply_raise())
-print(emp_2.email)
+print(emp_2._email)
