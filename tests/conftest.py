@@ -40,5 +40,11 @@ def second_category():
                     products=[Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)])
 
 
-# @pytest.fixture
-# def
+@pytest.fixture
+def product_dict():
+    return {
+        "name": "Samsung Galaxy S23 Ultra",
+        "description": "128GB, Зелёный цвет, 200MP камера",
+        "price": 140000.0,
+        "quantity": 8,
+    }
