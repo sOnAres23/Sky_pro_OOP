@@ -30,11 +30,11 @@ class Product:
     def price(self, value):
         if value <= 0:
             print("Цена не должна быть нулевая или отрицательная")
-        # else:
-        #     if self.__price > value:
-        #         print('Вы действительно хотите понизить цену? Выберите: "yes" или "no"')
-        #         user_input = input()
-        #         if user_input == 'yes':
-        #             self.__price = value
-        #         else:
-        #             self.__price = self.__price
+        else:
+            if self.__price > value:
+                print('Вы действительно хотите понизить цену? Выберите: "yes" или "no"')
+                user_input = input()
+                if user_input == 'yes':
+                    self.__price = value
+                else:
+                    self.__price = self.__price
