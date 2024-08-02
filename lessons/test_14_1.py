@@ -1,7 +1,7 @@
-import pytest
-
-from lessons.lesson_14_1 import Employee
-
+# import pytest
+#
+# from lessons.lesson_14_1 import Employee
+#
 #
 # @pytest.fixture()
 # def employee_ivan():

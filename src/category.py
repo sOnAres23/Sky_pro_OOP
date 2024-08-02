@@ -21,7 +21,7 @@ class Category:
         self.__products.append(product)
         Category.product_count += 1
 
-    @property
+    @property  # Это свойство КЛАССА
     def products(self):
         return self.__products
 

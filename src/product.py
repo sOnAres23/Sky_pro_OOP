@@ -22,7 +22,7 @@ class Product:
 
         return cls(name, description, price, quantity)
 
-    @property
+    @property  # Это свойство КЛАССА
     def price(self):
         return self.__price
 
@@ -32,7 +32,7 @@ class Product:
             print("Цена не должна быть нулевая или отрицательная")
         else:
             if self.__price > value:
-                print('Вы действительно хотите понизить цену? Выберите: "yes" или "no"')
+                print(f'Вы действительно хотите понизить цену с {self.__price} до {value}? Выберите: "yes" или "no"')
                 user_input = input()
                 if user_input == 'yes':
                     self.__price = value
