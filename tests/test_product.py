@@ -29,3 +29,12 @@ def test_prod_price_property(capsys, first_product):
     assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
     first_product.price = 180000.0
     assert first_product.price == 180000.0
+
+
+def test_product_str(first_product, second_product):
+    assert str(first_product) == 'Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт.'
+    assert str(second_product) == 'Iphone 15, 210000.0 руб. Остаток: 8 шт.'
+
+
+def test_product_add(first_product, second_product):
+    assert first_product + second_product == 2580000.0
