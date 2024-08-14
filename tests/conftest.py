@@ -81,3 +81,11 @@ def second_lawngrass():
 @pytest.fixture
 def product_iterator(first_category):
     return ProductIterator(first_category)
+
+
+@pytest.fixture
+def category_without_products():
+    return Category("Смартфоны",
+                    "Смартфоны, как средство не только коммуникации, "
+                    "но и получения дополнительных функций для удобства жизни",
+                    [])

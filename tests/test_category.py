@@ -50,3 +50,9 @@ def test_product_iterator(product_iterator):
 
 def test_category_product_setter_smartphone(first_category, first_smartphone):
     first_category.add_product = first_smartphone
+
+
+def test_category_middle_price(first_category, category_without_products):
+    assert first_category.middle_price() == '140333.33 руб.'
+    assert category_without_products.middle_price() == 0
+
