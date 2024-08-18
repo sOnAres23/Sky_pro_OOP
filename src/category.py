@@ -41,3 +41,11 @@ class Category(BaseCategory):
             product_list += f'{str(product)}\n'
 
         return product_list
+
+    def middle_price(self):
+        try:
+            total_sum = sum([product.price for product in self.__products])
+            total = total_sum / len(self.__products)
+            return f"{round(total, 2)} руб."
+        except ZeroDivisionError:
+            return 0
